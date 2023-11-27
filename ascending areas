@@ -1,0 +1,27 @@
+public static void main(String[] args) 
+    {
+        int counter = 0;
+        int compareCount = 0;
+        int area = 0;
+        int prevArea = 0;
+        while(compareCount<4)
+        {
+            counter ++;
+            prevArea = area;
+            Random ran = new Random();
+            int height = ran.nextInt(9)+1;
+            int width = ran.nextInt(4)+1;
+            area = width * height;
+            System.out.print(area + " ");
+            if(area > prevArea)
+            {
+                compareCount ++;
+            }
+            else
+            {
+                compareCount = 1;
+            }
+        }
+        System.out.println();
+        System.out.println("You calculate " + counter + " areas until creating 4 ascending area!");
+    }
